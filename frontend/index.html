@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Winkel</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -27,9 +31,7 @@
 
 
   <article class="intro">
-    <p>Winkel (logo ofzo)</p>
-    <p>Wie zijn we?</p>
-    <p>Blabla (contact?)</p>
+
   </article>
 
 </header>
@@ -41,14 +43,76 @@
 <main>
 
 
-  <div class="productcontainer">
-    <aside>Aside</aside>
+
+  <section class="nieuwephone">
+
+
+    <div class="infoPhone">
+      <img src="images/product-afbeeldingen/recentePhone/tripleZFold.jpg" alt="">
+
+      <div class="extraInformatieRecentePhone">
+        <h2>Galaxy Z TriFold</h2>
+        <p>De smartphone van de nieuwe generatie die grenzen verlegt.
+          Het drievoudig vouwbare scherm biedt een groot en meeslepend display, ideaal voor multitasking, streaming en productiviteit.
+          Een futuristisch design dat zich aanpast aan elk gebruik.</p>
+      </div>
+
+      <div class="extraInformatieRecentePhone">
+        <h2>Karakteristieken</h2>
+        <ul>
+          <li>Drievoudig vouwbaar AMOLED-scherm</li>
+          <li>Geavanceerde multitasking</li>
+          <li>Ultra-dun en premium design</li>
+          <li>Nieuwe generatie camera’s</li>
+        </ul>
+      </div>
+
+      <button><a href="#">Dat wil ik zien!</a></button>
+
+
+
+    </div>
+
+  </section>
+
+
+
+  <section class="filtreren">
+
+
+
+    <label for="prijsRange">Prijs:
+      <select name="" id="prijsRange">
+      <option value=""><100€</option>
+      <option value="">100€ - 300€</option>
+      <option value="">300€ - 600€</option>
+      <option value="">600€ - 800€</option>
+      <option value="">800€ - 1000€</option>
+      <option value="">1000€ - 1300€</option>
+      <option value="">1300€ - 1500€</option>
+    </select></label>
+
+    <label class="search" for="search"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg><input type="search" id="search"></label>
+
+    <label for="merk">Merk: <select name="" id="merk">
+      <option value="">Samsung</option>
+      <option value="">Apple</option>
+      <option value="">Xiaomi</option>
+      <option value="">Huawei</option>
+      <option value="">Google</option>
+      <option value="">Oppo</option>
+      <option value="">Motorola</option>
+    </select></label>
+
+
+
+
+
+  </section>
 
 
     <section class="productGrid">
 
-
-
       <article class="productKaart">
 
         <img src="images/telVoorbeeld.avif" alt="">
@@ -60,7 +124,8 @@
 
         </div>
 
-        <button>Meer details</button>
+          <button class="details">Meer details</button>
+          <button class="kopen">Kopen</button>
 
       </article>
 
@@ -75,7 +140,10 @@
 
         </div>
 
-        <button>Meer details</button>
+        <button class="details">Meer details</button>
+
+        <button class="kopen">Kopen</button>
+
 
       </article>
 
@@ -90,7 +158,10 @@
 
         </div>
 
-        <button>Meer details</button>
+        <button class="details">Meer details</button>
+
+        <button class="kopen">Kopen</button>
+
 
       </article>
 
@@ -105,7 +176,10 @@
 
         </div>
 
-        <button>Meer details</button>
+        <button class="details">Meer details</button>
+
+        <button class="kopen">Kopen</button>
+
 
       </article>
 
@@ -120,7 +194,10 @@
 
         </div>
 
-        <button>Meer details</button>
+        <button class="details">Meer details</button>
+
+        <button class="kopen">Kopen</button>
+
 
       </article>
 
@@ -135,7 +212,10 @@
 
         </div>
 
-        <button>Meer details</button>
+        <button class="details">Meer details</button>
+
+        <button class="kopen">Kopen</button>
+
 
       </article>
 
@@ -150,7 +230,10 @@
 
         </div>
 
-        <button>Meer details</button>
+        <button class="details">Meer details</button>
+
+        <button class="kopen">Kopen</button>
+
 
       </article>
 
@@ -165,7 +248,10 @@
 
         </div>
 
-        <button>Meer details</button>
+        <button class="details">Meer details</button>
+
+        <button class="kopen">Kopen</button>
+
 
       </article>
 
@@ -180,14 +266,19 @@
 
         </div>
 
-        <button>Meer details</button>
+        <button class="details">Meer details</button>
+
+        <button class="kopen">Kopen</button>
+
 
       </article>
+
+
 
     </section>
 
 
-  </div>
+
 
   <section class="recentereview">
 
