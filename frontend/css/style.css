@@ -1,0 +1,145 @@
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+header {
+    background-color: red;
+
+    margin-bottom: 50px;
+}
+
+nav{
+    background-color: green;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: 1;
+
+    ul{
+        display: flex;
+        gap: 20px;
+        list-style: none;
+
+        li{
+            a{
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+
+
+}
+
+.intro{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+
+header article {
+    margin-top: 100px;
+    background-color: pink;
+    padding: 100px;
+}
+
+
+.productcontainer{
+    display: flex;
+
+}
+
+main aside{
+    position: absolute;
+    right: 100px;
+    background-color: blue;
+    width: 300px;
+    height: 350px;
+}
+
+
+
+main .productGrid{
+
+    display: flex;
+    justify-content: space-between;
+    background-color: aqua;
+    flex-wrap: wrap;
+    position: relative;
+    left: 100px;
+    max-width: 1200px;
+    gap: 20px;
+
+    box-sizing: border-box;
+
+
+}
+
+.productGrid article{
+    background-color: brown;
+    flex-basis: calc(33.333% - 14px);
+    height: 350px;
+    width: 500px;
+}
+
+.productKaart{
+
+    img{
+        height: 200px;
+    }
+
+    display: flex;
+    gap: 30px;
+    position: relative;
+}
+
+.tekstinkaart{
+    display: flex;
+    flex-direction: column;
+}
+
+.productKaart button{
+    position: absolute;
+
+    bottom: 10px;
+
+}
+
+main .recentereview{
+    margin-top: 40px;
+    background-color: darkcyan;
+    position: relative ;
+    height: 500px;
+    display: flex;
+    gap: 500px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    align-items: center;
+
+}
+
+
+.reviewklant{
+    display: flex;
+    flex-direction: column;
+
+    height: 200px;
+    padding: 10px 400px 10px 10px;
+    background-color: cornflowerblue;
+}
+
+footer{
+    background-color: darkkhaki;
+    height: 1500px;
+
+
+}
