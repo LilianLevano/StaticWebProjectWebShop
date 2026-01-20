@@ -1,4 +1,10 @@
 
+
+:root{
+    --lichtblauw: #6495EDFF;
+    --background: #3e3d3d;
+}
+
 *{
     font-family: "Roboto Light", sans-serif;
 
@@ -17,6 +23,20 @@ img{
 
 header {
     margin-bottom: 50px;
+}
+
+.shoppingBasket{
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    background: var(--background);
+    fill: white;
+    padding: 10px;
+    border-radius: 100px;
+}
+
+.shoppingBasket:hover{
+    cursor: pointer;
 }
 
 /* Nav bruikbaar voor alle pagina's */
@@ -138,7 +158,7 @@ nav:not(.algemeneInfoVoorPhone){
         position: absolute;
         top: -40px;
         font-size: 1.5rem;
-        background-color: cornflowerblue;
+        background-color: #6495EDFF;
         border-radius: 10px;
         padding: 5px;
         color: white;
@@ -394,22 +414,150 @@ footer{
 
 .subpaginaMain{
     margin-top: 200px;
-
-
 }
-
-
 
 .mainSectionPhone{
     display: flex;
     justify-content: center;
 }
 
+.groteAfbeeldingPhone{
+    margin-bottom: 50px;
+}
+
+.alternatieveBeelden{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+    img{
+        height: 100px;
+    }
+}
+
 .afbeeldingVoorTitelPhone{
     display: flex;
     flex-direction: column;
     margin-right: 200px;
+
 }
+
+.karakteristiekenVoorPhone{
+    display: flex;
+    flex-direction: column;
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .stockage{
+        display: flex;
+
+    }
+
+    svg{
+        position: relative;
+        top: 7px;
+    }
+
+    select{
+        padding: 10px;
+    }
+
+
+
+
+}
+
+.prijs{
+    font-size: 1.6em;
+}
+
+
+
+.buttonAankoop{
+
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+
+    button{
+        padding: 15px;
+        position: relative;
+    }
+
+    .mand{
+        background-color: var(--lichtblauw);
+        color: white;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 15px;
+        transition: 0.1s;
+    }
+
+    .phoneKopen{
+        background-color: #1e7f43;
+        color: white;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 15px;
+        width: 100px;
+        transition: 0.1s;
+
+
+        svg{
+            position: absolute;
+            left: 35px;
+            top: 10px;
+        }
+    }
+
+
+}
+
+.ophalenWinkel{
+    padding: 15px;
+    font-size: 1.2rem  ;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid var(--lichtblauw);
+    transition: 0.1s;
+}
+
+.mand, .phoneKopen, .ophalenWinkel:hover{
+    cursor: pointer;
+
+
+}
+
+.mand:hover{
+    background-color: #4c75b8  ;
+}
+
+.mand:active{
+    transform: scale(0.98);
+    background-color: #3d5f95;
+}
+
+.phoneKopen:hover{
+    background-color: #186534 ;
+
+}
+
+.phoneKopen:active{
+    transform: scale(0.98);
+    background-color: #114a25 ;
+}
+
+.ophalenWinkel:active{
+    transform: scale(0.98);
+    background-color: #d8d8d8;
+}
+
 
 
 .algemeneInfoVoorPhone{
@@ -435,10 +583,13 @@ footer{
     .algemeen{
         height: 400px;
         position: relative;
-        background-color: #ff0000;
-        max-width: 900px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.62), 7px 7px 1px rgba(100, 149, 237, 0.62) ;
+        max-width: 1100px;
         margin-left: auto;
         margin-right: auto;
+        padding: 15px;
+        box-sizing: border-box;
+        margin-bottom: 60px;
 
     }
 
@@ -457,23 +608,46 @@ footer{
     display: flex;
     justify-content: center;
     gap: 25%;
+
 }
 
 .tekstInAlgemeneContainer{
     display: flex;
     flex-direction: column;
+    word-wrap: break-word;
+    max-width: 300px;
 }
 
 .reviewklantVoorPhone{
-    background-color: #1e7f43;
+ padding: 10px;
 }
 
 .reviewInReviewContainer{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: space-evenly;
+    gap: 210px;
+    max-width: 800px;
+
 
 }
 .reviewklantVoorPhone{
-     flex-basis: calc(50% - 10px);
+
+    flex-basis: calc(45% - 100px);
+
  }
+
+.tableInAlgemeneContainer{
+
+    *{
+        border-collapse: collapse;
+    }
+
+    td{
+        padding: 10px 100px 10px 50px;
+    }
+
+    tr:nth-child(even){
+        background-color: rgba(189, 189, 189, 0.6);
+    }
+}
