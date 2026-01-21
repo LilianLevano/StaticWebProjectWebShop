@@ -25,6 +25,9 @@ header {
     margin-bottom: 50px;
 }
 
+
+    /*Shopping basket is een SVG die fixed rechts boven gepositioneerd is*/
+
 .shoppingBasket{
     position: fixed;
     top: 100px;
@@ -41,7 +44,8 @@ header {
     cursor: pointer;
 }
 
-/* Nav bruikbaar voor alle pagina's */
+
+/* Nav bruikbaar voor alle pagina's. Deze is van default fixed met een transparante achtergrond, met een flex-direction: row. */
 .mainNav{
     background-color: rgba(0, 0, 0, 0.75);
     position: fixed;
@@ -83,7 +87,7 @@ header {
 
 
 
-
+/*Fake filtreer sectie voor de product grid. Bevat een filter voor de prijs, een zoekbalk, en filter voor de merk. Default staan ze naast elkaar.*/
 .filtrerenIndex{
 
     margin-right: auto;
@@ -138,6 +142,8 @@ header {
 
 
 
+/*Sectie voor een nieuwe phone te promoten. Paragrafen en beeld staan default naast elkaar.*/
+
 .nieuwephone{
 
     margin-left: auto;
@@ -155,6 +161,7 @@ header {
         border-radius: 30px;
     }
 
+    /*Label die op de border zit*/
     .checkOutNieuwePhone{
 
         position: absolute;
@@ -168,6 +175,7 @@ header {
     }
 
 
+    /*Button om naar de site van de nieuwste phone te gaan*/
     button{
         align-self: center;
         padding: 25px 70px 25px 70px;
@@ -193,6 +201,7 @@ header {
 
     }
 
+    /*De twee paragrafen zitten naast elkaar*/
     .infoPhone{
         display: flex;
        
@@ -202,6 +211,7 @@ header {
 
     }
 
+    
     .extraInformatieRecentePhone{
         display: flex;
         flex-direction: column;
@@ -212,6 +222,8 @@ header {
 
 }
 
+
+/*Fancy effect voor de link naar de specifieke pagina*/
 .trifold:hover{
     background-color: #4c75b8;
 }
@@ -221,7 +233,9 @@ header {
     background-color: #3d5f95;
 }
 
+/*---------------------------ARTIKEL GRID ----------------------*/
 
+/*ProductGrid werd niet met CSS Grid gemaakt, het is gewoon zijn naam. De "grid" plaatst zich in het midden van de pagina. */
 .productGrid{
 
     display: flex;
@@ -244,6 +258,7 @@ header {
 
 
 
+/*Default zijn er 3 kaarten / producten per rij*/
 .productKaart{
 
     img{
@@ -268,15 +283,19 @@ header {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
 }
 
+/*Controleert de tekst (productnaam en prijs) van elk artikel*/
 .tekstinkaart{
     display: flex;
     flex-direction: column;
-
-    p{
+    gap: 20px;
+    
+    
+    h2, h3{
         margin: 0;
     }
 }
 
+/*Kleine label die zich recths boven, een beetje geroteerd is, van een artikel zet en die aanduid of een product in promotie is*/
 .labelPromotie{
     background-color: #FF2B2B;
     rotate: 40deg;
@@ -289,21 +308,18 @@ header {
     border-radius: 30px;
 }
 
-.details{
-    position: relative;
-    
-    height: 50px;
-}
 
-.details a{
-    width: 100%;
-}
 
+
+
+/*Nieuwe prijs na promotie in groen*/
 .promotie{
     color: green;
     font-size: 1.5em;
 }
 
+
+/*Zorgt ervoor dat een link overal op het button klikbaar is*/
 .productKaart a{
     position: absolute;
     bottom: 0;
@@ -311,6 +327,7 @@ header {
 }
 
 
+/*Plaatst de button "kopen"*/
 .productKaart .kopen{
     position: absolute;
     width: 30%;
@@ -326,41 +343,8 @@ header {
     transition: 0.2s;
 }
 
-.outofstock{
-    display: none;
-}
 
-.productKaart:hover{
-    
-    .outofstock{
-        display: inline;
-        position: absolute;
-        color: white;
-        background-color: #ea0505;
-       padding: 10px;
-        text-transform: uppercase;
-       top: -10px;
-        
-        border-radius: 0 20px 20px 20px;
-    }
-    
-}
-
-
-.productKaart .detailsOutOfStock{
-    position: absolute;
-    width: 60%;
-    bottom: 20px;
-    padding: 15px;
-    font-size: 17px;
-    text-transform: uppercase;
-    background-color: #ea0505;
-    border: none;
-    border-radius: 15px;
-    color: white;
-    transition: 0.2s;
-}
-
+/*Plaatst de button "meer detauks"*/
 .productKaart .details{
     position: absolute;
     width: 60%;
@@ -394,12 +378,48 @@ header {
     transform: scale(0.98);
     background-color: #3d5f95;
 }
-
-
 .productKaart button:hover{
     cursor: pointer;
 }
 
+
+.outofstock{
+    display: none;
+}
+
+/*Label out of stock verschijnt als we de artikel hoveren*/
+.productKaart:hover{
+
+    .outofstock{
+        display: inline;
+        position: absolute;
+        color: white;
+        background-color: #ea0505;
+        padding: 10px;
+        text-transform: uppercase;
+        top: -10px;
+
+        border-radius: 0 20px 20px 20px;
+    }
+
+}
+
+/*Plaatst de tooltip out of stock*/
+.productKaart .detailsOutOfStock{
+    position: absolute;
+    width: 60%;
+    bottom: 20px;
+    padding: 15px;
+    font-size: 17px;
+    text-transform: uppercase;
+    background-color: #ea0505;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    transition: 0.2s;
+}
+
+/*Voegt een kleine, fake paginatie onder de product grid*/
 .paginatie{
     display: flex;
     list-style: none;
@@ -422,14 +442,18 @@ header {
         cursor: pointer;
     }
 
-
-
+    /*Toont aan dat we op de eerste pagina zijn*/
+    #een{
+        background-color: var(--lichtblauw);
+    }
+    
 }
 
-#een{
-    background-color: var(--lichtblauw);
-}
 
+/*---------------------------------------------------------------*/
+/*--------------------------REVIEW CONTAiNER -------------------*/
+
+/*Container voor alle review, ze zitten default naast elkaar en de overflow eindigt in een scroll van de container*/
 main .recentereview{
 
     display: flex;
@@ -442,12 +466,13 @@ main .recentereview{
     margin-top: 40px;
 
 
+    /*Elk review neemt default 400px breedte in */
     .reviewklant{
 
         display: flex;
         flex-direction: column;
 
-        flex: 0 0 400px;         /*  shrink 0, grow 0, base 320px */
+        flex: 0 0 400px;         
         
         height: 200px;
         background-color: #fff;
@@ -476,6 +501,7 @@ main .recentereview{
 
 
 
+/*Footer word gecentraliseerd*/
 footer{
     background-color: #1E1E1E;
     height: 1500px;
@@ -483,6 +509,7 @@ footer{
     padding: 50px;
     text-align: center;
 
+    /*De main categories in de footer staan naast elkaar */
     .footerMainList{
         display: flex;
         list-style: none;
@@ -496,6 +523,7 @@ footer{
 
     }
 
+    /*Dit lijst staat in een categorie, en elk element staat onder elkaar*/
     .subList{
 
         list-style: none;
@@ -516,31 +544,24 @@ footer{
 }
 
 
-/* -------DEEL VOOR SUBPAGINA ------------ */
+/* ------------------DEEL VOOR SUBPAGINA ------------------- */
+
+
+
 
 .subpaginaMain{
     margin-top: 200px;
 }
 
-.mainSectionPhone{
-    display: flex;
-    justify-content: center;
 
-    border: 1px solid black;
-    max-width: fit-content;
-    margin: 0 auto 0 auto;
-    padding: 50px;
-    
-    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
-}
-
+/*Kleine sectie om de nieuwe phone te promoten*/
 .checkout{
     position: absolute;
     right: 50px;
     text-align: center;
     padding: 30px;
     border: 3px solid var(--background);
-    
+
     .checkThisOut{
         position: absolute;
         top: -35px;
@@ -551,15 +572,31 @@ footer{
         border-radius: 40px;
         text-transform: uppercase;
     }
-    
+
     a{
         color: black;
     }
-    
+
     img{
         height: 150px;
     }
 }
+
+
+/*Kleine border en schaduw effect rond de main sectie van de product, met zijn naam / karakteristieken naast elkaar*/
+.mainSectionPhone{
+    display: flex;
+    justify-content: center;
+
+
+    border: 1px solid black;
+    max-width: fit-content;
+    margin: 0 auto 0 auto;
+    padding: 50px;
+    
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
+}
+
 
 
 
@@ -568,6 +605,8 @@ footer{
     margin-bottom: 50px;
 }
 
+
+/*Plaats andere, klenere beelden onder de grote beeld van de product*/
 .alternatieveBeelden{
     display: flex;
     gap: 20px;
@@ -586,64 +625,46 @@ footer{
     }
 }
 
+/*Plaats de productnaam en afbeeldingen onder elkaar*/
 .afbeeldingVoorTitelPhone{
     display: flex;
     flex-direction: column;
     margin-right: 100px;
-
 }
 
+/*Plaats de karakteristieken en prijs onder elkaar */
 .karakteristiekenVoorPhone{
     display: flex;
     flex-direction: column;
 
+    /*Plaats de verschillende elementen van de form onder elkaar om "br" te vermijden */
     form{
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
 
+    /*Flex gemaakt om makkelijk een gap te maken tussen de opties*/
     .stockage{
         display: flex;
-
         gap: 30px;
-
     }
 
+    /*Klein icoontje om aan te tonen dat deze sectie een kleur vraagt*/
     svg{
         position: relative;
         top: 7px;
     }
-
+    
     select{
         padding: 10px;
     }
-
-
-
-
-}
-
-.extraAfbeeldingen{
-    box-sizing: border-box;
-    margin-top: 100px ;
-    margin-left: 100px;
-    margin-right: 100px;
-    gap: 20px;
-    display: flex;
-    justify-content: space-between;
-    img{
-        height: 300px;
+    
+    .prijs{
+        font-size: 1.6em;
     }
-    overflow: scroll    ;
-    overflow-y: hidden;
+
 }
-
-.prijs{
-    font-size: 1.6em;
-}
-
-
 
 .buttonAankoop{
 
@@ -727,44 +748,69 @@ footer{
     background-color: #d8d8d8;
 }
 
+/*Plaats extra, grotere afbeeldingen onder de main section van de product. Overflow zit in een scroll*/
+.extraAfbeeldingen{
+    box-sizing: border-box;
+    margin-top: 100px ;
+    margin-left: 100px;
+    margin-right: 100px;
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    img{
+        height: 300px;
+    }
+    overflow: scroll    ;
+    overflow-y: hidden;
+}
 
 
+
+
+
+
+
+
+
+/*Bepaalt de interne nav voor de algemene informatie van de product. Is sticky, volgt totdat de container stopt */
 .algemeneInfoVoorPhone{
 
     max-width: 60%;
     border-bottom: 1px solid black;
     margin: 100px auto 50px auto;
     z-index: 1;
+    position:sticky;
+    top: 100px;
+    bottom: 0;
 
-    ul{
+    ul {
         display: flex;
         list-style: none;
         flex-basis: 60%;
-        justify-content: space-around ;
+        justify-content: space-around;
 
+        li a {
+            text-decoration: none;
+            padding: 8px;
+            background-color: var(--background);
+            color: white;
+            text-transform: uppercase;
+            border-radius: 90px;
+        }
 
     }
 
 
-
 }
 
-.algemeneInfoVoorPhone ul li a{
-    text-decoration: none;
-    padding: 8px;
-    background-color: var(--background);
-    color: white;
-    text-transform: uppercase;
-    border-radius: 90px;
-}
 
+
+/*Container voor alle "kaartjes"*/
 .algemeneInfoVoorPhoneContainer{
 
-    position: relative;
-
+    /*Elke kaart heeft een vaste hoogte van 400px, wordt gecentreerd */
     .algemeen{
         height: 400px;
-        position: relative;
         box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.62), 7px 7px 1px rgba(100, 149, 237, 0.62) ;
         max-width: 1100px;
         margin-left: auto;
@@ -775,73 +821,81 @@ footer{
 
     }
 
-    h2{
-        margin-left: 15%;
+    /*Bevat de inhoud van de kaart, wordt gecentraliseerd, zet alle paragrafen naast elkaar*/
+    .algemeenArticleContainer{
+        display: flex;
+        justify-content: center;
+        gap: 25%;
+
     }
 
-    .algemeneInfoVoorPhone{
-        position:sticky;
-        top: 100px;
-        bottom: 0;
-    }
-}
-
-.algemeenArticleContainer{
-    display: flex;
-    justify-content: center;
-    gap: 25%;
-
-}
-
-.tekstInAlgemeneContainer{
-    display: flex;
-    flex-direction: column;
-    word-wrap: break-word;
-    max-width: 300px;
-}
-
-.reviewklantVoorPhone{
- padding: 10px;
-}
-
-.reviewInReviewContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 210px;
-    max-width: 800px;
-
-
-}
-.reviewklantVoorPhone{
-
-    flex-basis: calc(45% - 100px);
-
- }
-
-.tableInAlgemeneContainer{
-
-    *{
-        border-collapse: collapse;
+    /*Zet de content van elke paragraaf onder elkaar */
+    .tekstInAlgemeneContainer{
+        display: flex;
+        flex-direction: column;
+        word-wrap: break-word;
+        max-width: 300px;
     }
 
-    td{
-        padding: 10px 100px 10px 50px;
+    .reviewklantVoorPhone{
+        padding: 10px;
     }
 
-    tr:nth-child(even){
-        background-color: rgba(189, 189, 189, 0.6);
+    .reviewInReviewContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 210px;
+        max-width: 800px;
+
+
     }
+    
+    /*Zorgt ervoor dat de twee kaarten de volledige plaats nemen*/
+    .reviewklantVoorPhone{
+
+        flex-basis: calc(45% - 100px);
+
+    }
+
+    .tableInAlgemeneContainer{
+
+        *{
+            border-collapse: collapse;
+        }
+
+        td{
+            padding: 10px 100px 10px 50px;
+        }
+
+        tr:nth-child(even){
+            background-color: rgba(189, 189, 189, 0.6);
+        }
+    }
+    
+    
+    
+    
+    
+
+    
 }
+
+
+
+
 
 
 @media screen and (max-width: 1668px){
+    /*Verstopt de promoot sectie*/
     .checkout{
         display: none;
     }
 }
 
 @media screen and (max-width: 900px){
+
+    /*Zet alle elementen van de main sectie van de product onder elkaar en wordt gecentreerd*/
     .mainSectionPhone{
         display: flex;
         flex-direction: column;
@@ -865,6 +919,8 @@ footer{
 }
 
 @media screen and (max-width: 1439px) {
+    
+    /*Zet alle tekst voor de nieuwe phone in de intro sectie onder elkaar*/
     .infoPhone{
         display: flex;
         flex-direction: column;
@@ -881,10 +937,12 @@ footer{
         width: 600px;
     }
 
+    /*Zet max 2 producten op een rij*/
     .productKaart{
        
         flex-basis:calc(49% - 160px) ;
-        justify-content: space-between;
+        align-items: flex-start;
+        gap: 10px;
     }
     
     .productGrid{
@@ -893,16 +951,24 @@ footer{
 
 }
 
+@media screen and (max-width: 1050px){
+    .labelPromotie{
+        rotate: 0deg;
+        top: -55px;
+    }
+}
 
 
 @media screen and (max-width: 850px) {
 
+    /*Zet max 1 product per rij*/
     .productKaart {
 
         flex-basis: calc(99% - 160px);
         justify-content: flex-start;
     }
     
+    /*Verkleint de paginatie*/
     .paginatie{
         gap: 10px;
         
@@ -917,19 +983,18 @@ footer{
 
 @media screen and (max-width: 700px) {
 
-    
+    /*Verkleint de extra afbeeldingen van de producten*/
     .extraAfbeeldingen{
         img{
             height: 250px;
         }
     }
     
+    /*Zet de interne nav op een rij en maakt het static*/
     .algemeneInfoVoorPhone{
 
         
        border: none;
-        margin: 100px auto 50px auto;
-        z-index: 1;
         position: static;
 
         ul{
@@ -939,54 +1004,25 @@ footer{
             gap: 20px;
             padding:0;
 
-
         }
-        
 
     }
-
-    .algemeneInfoVoorPhoneContainer{
-
-        
-        .algemeneInfoVoorPhone{
-            position: static;
-            top: 100px;
-            bottom: 0;
-        }
-    }
-
-    .algemeneInfoVoorPhone ul li a{
-        text-decoration: none;
-        padding: 8px;
-        background-color: var(--background);
-        color: white;
-        text-transform: uppercase;
-        border-radius: 90px;
-    }
-    
-    
-    
     
 }
 
 @media screen and (max-width: 620px) {
    
 
-   .algemeneInfoVoorPhoneContainer{
-       height: 2000px;
-   }
+  
 
+    /*Vergroot de hoogte dat een kaart kan worden, wordt aangepast met zijn content*/
     .algemeneInfoVoorPhoneContainer:not(.algemeneInfoVoorPhone) .algemeen {
-        
-        
-        padding: 10px;
         height: fit-content;
         max-width: 90%;
-        margin: 0 auto 100px auto;
-
         background-color: white;
     }
     
+    /*Zet alle elementen van "algemeen" onder elkaar*/
     .algemeenArticleContainer{
         flex-direction: column;
         justify-content: center;
@@ -996,96 +1032,47 @@ footer{
         padding: 10px;
     }
 
-    .reviewInReviewContainer{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+    /*Zet alle reviews onder elkaar*/
+    .algemeneInfoVoorPhoneContainer .reviewInReviewContainer{
+    
+        flex-direction: column;
         gap: 10px;
-        max-width: 800px;
-
-
-    }
-    .reviewklantVoorPhone{
-
-        flex-basis: calc(99% - 100px);
-
-    }
-
-
-    .tableInAlgemeneContainer{
-
-        *{
-            border-collapse: collapse;
-        }
-
-        td{
-            padding: 10px 90% 10px 50px;
-        }
-
-        tr:nth-child(even){
-            background-color: rgba(189, 189, 189, 0.6);
-        }
+        
+        
     }
     
-   
-   
+    /*De width van een review neemt de hele container */
+    .reviewklantVoorPhone{
+        flex-basis: calc(99% - 100px);
+    }
+
+
+    /*Verwijderd de grote padding-right op elke cel*/
+    .algemeneInfoVoorPhoneContainer .tableInAlgemeneContainer{
+
+        td{
+            padding: 10px 30px 10px 50px;
+        }
+        
+    }
+    
+    /*Zet alle elementen van de filter onder elkaar*/
     .filtrerenIndex{
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 40px;
-        width: 40%;
-        
-        #prijsRange{
-            width: 100%;
-        }
-        
-        #labelPrijsRange{
-            text-align: center;
-        }
-        
-        .search{
-            
-            color: white;
-            
-            input{
-                color: white;
-            }
-            
-            #search{
-                width: 100%;
-                color: white;
-            }
-            svg{
-                position: absolute;
-                left: 10px;
-            }
-        }
-        
-        #merk{
-            width: 100%;
-        }
-        
-        #labelMerk{
-            text-align: center;
-        }
+        width: 40%
+  
     }
 
-    .checkOutNieuwePhone{
-        font-size: 10px ;
-    }
-    
+    /*Verkleint de hele sectie nieuwe phone, kleinere afbeelding en font size*/
     .infoPhone{
-        
-        
-        
-
         
         img{
             height: 150px;
             width: 300px;
         }
-        
         .extraInformatieRecentePhone{
             font-size: 0.7rem;
             
@@ -1094,10 +1081,7 @@ footer{
                 padding: 0;
             }
         }
-
-
     }
-
     .nieuwephone{
         width: 90%;
         padding: 35px 9px 9px;
@@ -1108,6 +1092,7 @@ footer{
     
 }
 
+/*Verkleint de extra afbeeldingen van een product*/
 @media screen and (max-width: 580px) {
     .extraAfbeeldingen{
         img{
@@ -1117,15 +1102,18 @@ footer{
 }
 
 @media screen and (max-width: 500px) {
-    .extraAfbeeldingen{
-        img{
-            height: 150px;
-            
-        }
 
+    
+    
+    /*Verkleint de extra afbeeldingen van een product*/
+    .extraAfbeeldingen{
+        img {
+            height: 150px;
+        }
         margin: 10px 10px 10px 10px;
     }
     
+    /*Zet alle elementen van de main nav onder elkaar*/
     .mainNav{
         
         position: static;
@@ -1149,6 +1137,8 @@ footer{
         justify-content: center;
     }
     
+    
+    /*Elke product kaart neemt meer plaats voor beter visibiliteit*/
     .productKaart {
         flex-basis: calc(80%);
         height: 300px;
@@ -1158,19 +1148,25 @@ footer{
         }
     }
     
+    /*Zet de rotation van de label op 0, werd beetje verplaatst naar boven en links om de titel van de product niet te verstoppen*/
     .labelPromotie{
         rotate: 0deg;
-        top: -50px;
-        left: 150px;
+        top: -55px;
+        left: 250px;
+        width: 45%;
     }
     
+    /*De reviews worden kleiner*/
     .reviewklant{
-        flex: 0 0 250px;         /*  shrink 0, grow 0, base 320px */
+        
         max-width: 280px;
+        height: fit-content;
     }
     
 }
 
+
+/*Afbeelding van de nieuwe phone verkleint*/
 @media screen and (max-width: 367px) {
     .infoPhone{
         img{
