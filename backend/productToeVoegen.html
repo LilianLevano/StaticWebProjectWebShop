@@ -17,6 +17,7 @@
 </head>
 <body>
 
+<!-- Aside is exact dezelfde als de aside van admin.html-->
 <aside>
 
     <section class="userInfo">
@@ -50,16 +51,25 @@
 
 </aside>
 
-    
+
+<!-- Formulier voor product toevoegen -->
     <form class="productToevoegenForm" action="">
 
+        <!-- Algemene informatie veldset -->
         <fieldset class="algemeneinformatie">
             <legend>Algemene informatie</legend>
+
+            <!-- Naam van de smartphone -->
             <label for="smartphonename">Smartphonename: <input type="text" id="smartphonename"></label>
+
+            <!-- Unieke ID van smartphone -->
             <label for="smartphoneid">Smartphone-ID: <input type="number" id="smartphoneid"></label>
+
+            <!-- Prijs van smartphone -->
             <label for="prijs">Prijs (€): <input type="number" step="0.01" id="prijs"></label>
 
 
+            <!-- Selectie van de merk -->
             <label for="merkphone">Van welke merk is deze smartphone?
                 <select name="merkphone" id="merkphone">
                     <option value="1">Apple</option>
@@ -75,6 +85,8 @@
             </label>
 
         </fieldset>
+
+        <!-- Opslagcapaciteit veldset -->
         <fieldset class="opslagCapaciteit">
             <legend>Duid aan welke opslagcapaciteiten beschikbaar zijn</legend>
 
@@ -107,6 +119,7 @@
             </label>
         </fieldset>
 
+        <!-- Beschrijving textarea -->
         <label for="beschrijving">
             Beschrijf deze smartphone
 
@@ -115,6 +128,7 @@
 
         </label>
 
+        <!-- Submit knop -->
         <input class="submit" type="submit" value="Product Toevoegen">
         
     </form>
