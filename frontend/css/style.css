@@ -259,6 +259,7 @@ header {
     position: relative;
     padding: 10px;
     transition: 0.2s;
+    
 }
 
 
@@ -288,10 +289,27 @@ header {
     border-radius: 30px;
 }
 
+.details{
+    position: relative;
+    
+    height: 50px;
+}
+
+.details a{
+    width: 100%;
+}
+
 .promotie{
     color: green;
     font-size: 1.5em;
 }
+
+.productKaart a{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 
 .productKaart .kopen{
     position: absolute;
@@ -302,6 +320,41 @@ header {
     font-size: 17px;
     text-transform: uppercase;
     background-color: #1e7f43;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    transition: 0.2s;
+}
+
+.outofstock{
+    display: none;
+}
+
+.productKaart:hover{
+    
+    .outofstock{
+        display: inline;
+        position: absolute;
+        color: white;
+        background-color: #ea0505;
+       padding: 10px;
+        text-transform: uppercase;
+       top: -10px;
+        
+        border-radius: 0 20px 20px 20px;
+    }
+    
+}
+
+
+.productKaart .detailsOutOfStock{
+    position: absolute;
+    width: 60%;
+    bottom: 20px;
+    padding: 15px;
+    font-size: 17px;
+    text-transform: uppercase;
+    background-color: #ea0505;
     border: none;
     border-radius: 15px;
     color: white;
