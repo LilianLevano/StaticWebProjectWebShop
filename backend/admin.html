@@ -15,17 +15,14 @@
 </head>
 <body>
 
-
-<header></header>
-
 <main>
-
+    <!-- Sidebar van de admin met gebruiker info en navigatie -->
     <aside>
-
+        <!-- Gebruikersinformatie -->
         <section class="userInfo">
             <h3>Admin Admin</h3>
         </section>
-        
+        <!-- Admin navigatie menu -->
         <nav>
             <ul>
                 <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M520-600v-240h320v240H520ZM120-440v-400h320v400H120Zm400 320v-400h320v400H520Zm-400 0v-240h320v240H120Zm80-400h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z"/></svg>
@@ -39,7 +36,8 @@
                     <a href="">Settings</a></li>
             </ul>
         </nav>
-
+        
+        <!-- Logout sectie onderaan sidebar -->
         <div class="backcolor">
             <section class="logout">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
@@ -53,12 +51,15 @@
         
     </aside>
 
+    <!-- Zoekbalk boven de tabel -->
     <form action="">
         <label class="search" for="productZoeken"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg><input type="search" placeholder="Zoek op Productnaam" id="productZoeken"></label>
     </form>
 
+    <!-- Link naar product toevoegen pagina -->
     <a class="productToevoegen" href="productToeVoegen.html">Voeg een product toe</a>
-    
+
+    <!-- Producten tabel -->
     <table>
         <tr>
             <th>ID</th>
@@ -69,6 +70,9 @@
       
         </tr>
 
+        <!-- Product rijen: herhaling van dezelfdestructuur voor elk product
+         Strctuur: ID, Productnaam, Voorraadstatus, Prijs, Actie buttons
+         -->
         <tr>
             <td>1</td>
             <td>iPhone 17</td>
@@ -163,7 +167,7 @@
 </main>
 
 
-<footer></footer>
+
 
 </body>
 </html>
