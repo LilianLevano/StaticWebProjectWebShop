@@ -5,12 +5,13 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Product Toevoegen aan Telify</title>
+    <title>Product Wijzigen van Telify</title>
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 
     <link rel="stylesheet" href="admin.css">
 </head>
@@ -54,13 +55,13 @@
 
     <fieldset class="algemeneinformatie">
         <legend>Algemene informatie</legend>
-        <label for="">Smartphonename: <input type="text"></label>
-        <label for="">Smartphone-ID: <input type="number"></label>
-        <label for="">Prijs (€): <input type="number" step="0.01"></label>
+        <label for="smartphonename">Smartphonename: <input type="text" id="smartphonename"></label>
+        <label for="smartphoneid">Smartphone-ID: <input type="number" id="smartphoneid"></label>
+        <label for="prijs">Prijs (€): <input type="number" step="0.01" id="prijs"></label>
 
 
-        <label for="">Van welke merk is deze smartphone?
-            <select name="" id="">
+        <label for="merkphone">Van welke merk is deze smartphone?
+            <select name="merkphone" id="merkphone">
                 <option value="1">Apple</option>
                 <option value="1">Samsung</option>
                 <option value="1">Xiaomi</option>
@@ -106,10 +107,10 @@
         </label>
     </fieldset>
 
-    <label for="">
+    <label for="beschrijving">
         Beschrijf deze smartphone
 
-        <textarea rows="5" cols="30"></textarea>
+        <textarea rows="5" cols="30" id="beschrijving"></textarea>
 
 
     </label>
