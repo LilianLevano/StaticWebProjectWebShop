@@ -42,15 +42,13 @@ header {
 }
 
 /* Nav bruikbaar voor alle pagina's */
-nav:not(.algemeneInfoVoorPhone){
+.mainNav{
     background-color: rgba(0, 0, 0, 0.75);
     position: fixed;
     top: 0;
     width: 100%;
     padding: 10px;
     z-index: 1;
-
-
 
     ul{
         display: flex;
@@ -138,6 +136,8 @@ nav:not(.algemeneInfoVoorPhone){
 
 }
 
+
+
 .nieuwephone{
 
     margin-left: auto;
@@ -195,10 +195,10 @@ nav:not(.algemeneInfoVoorPhone){
 
     .infoPhone{
         display: flex;
-        justify-content: center;
-        gap: 90px;
+       
+       justify-content: space-between;
         box-sizing: border-box;
-        align-items: flex-start;
+       
 
     }
 
@@ -234,19 +234,15 @@ nav:not(.algemeneInfoVoorPhone){
     flex-wrap: wrap;
     position: relative;
 
-    max-width: 1200px;
+    max-width: 1400px;
     gap: 100px;
 
     box-sizing: border-box;
 
 }
 
-.productGrid article{
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.46);
-    flex-basis: calc(33.333% - 100px);
-    height: 225px;
-    width: 400px;
-}
+
+
 
 .productKaart{
 
@@ -254,6 +250,9 @@ nav:not(.algemeneInfoVoorPhone){
         height: 150px;
     }
 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.46);
+    flex-basis: calc(33.333% - 90px);
+    height: 225px;
 
     display: flex;
     gap: 15px;
@@ -261,6 +260,7 @@ nav:not(.algemeneInfoVoorPhone){
     padding: 10px;
     transition: 0.2s;
 }
+
 
 .productKaart:hover{
     transform: translateY(-5%);
@@ -286,6 +286,11 @@ nav:not(.algemeneInfoVoorPhone){
     font-size: 25px;
     padding: 5px;
     border-radius: 30px;
+}
+
+.promotie{
+    color: green;
+    font-size: 1.5em;
 }
 
 .productKaart .kopen{
@@ -348,6 +353,8 @@ nav:not(.algemeneInfoVoorPhone){
     justify-content: center;
     gap: 10%;
     margin-top: 70px;
+    margin-left:0;
+    padding: 0;
 
     li{
         background-color: var(--background);
@@ -388,7 +395,7 @@ main .recentereview{
         flex-direction: column;
 
         flex: 0 0 400px;         /*  shrink 0, grow 0, base 320px */
-        min-width: 320px;        /* ceinture + bretelles */
+        
         height: 200px;
         background-color: #fff;
         margin-left: 40px;
@@ -465,7 +472,43 @@ footer{
 .mainSectionPhone{
     display: flex;
     justify-content: center;
+
+    border: 1px solid black;
+    max-width: fit-content;
+    margin: 0 auto 0 auto;
+    padding: 50px;
+    
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
 }
+
+.checkout{
+    position: absolute;
+    right: 50px;
+    text-align: center;
+    padding: 30px;
+    border: 3px solid var(--background);
+    
+    .checkThisOut{
+        position: absolute;
+        top: -35px;
+        left: 15px;
+        background-color: var(--lichtblauw);
+        padding: 10px;
+        color: white;
+        border-radius: 40px;
+        text-transform: uppercase;
+    }
+    
+    a{
+        color: black;
+    }
+    
+    img{
+        height: 150px;
+    }
+}
+
+
 
 .groteAfbeeldingPhone{
     height: 350px;
@@ -476,16 +519,24 @@ footer{
     display: flex;
     gap: 20px;
     justify-content: center;
+    
 
     img{
         height: 150px;
+        box-shadow: 1px 1px 10px black;
+        transition: 0.2s;
+    }
+    
+    img:hover{
+        transform: scale(1.1);
+        
     }
 }
 
 .afbeeldingVoorTitelPhone{
     display: flex;
     flex-direction: column;
-    margin-right: 200px;
+    margin-right: 100px;
 
 }
 
@@ -529,7 +580,7 @@ footer{
     display: flex;
     justify-content: space-between;
     img{
-        height: 500px;
+        height: 300px;
     }
     overflow: scroll    ;
     overflow-y: hidden;
@@ -654,7 +705,7 @@ footer{
     border-radius: 90px;
 }
 
-.algemeneInfoVoorPhoneContainer:not(.algemeneInfoVoorPhone){
+.algemeneInfoVoorPhoneContainer{
 
     position: relative;
 
@@ -675,7 +726,7 @@ footer{
         margin-left: 15%;
     }
 
-    nav{
+    .algemeneInfoVoorPhone{
         position:sticky;
         top: 100px;
         bottom: 0;
@@ -727,5 +778,343 @@ footer{
 
     tr:nth-child(even){
         background-color: rgba(189, 189, 189, 0.6);
+    }
+}
+
+
+@media screen and (max-width: 1668px){
+    .checkout{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .mainSectionPhone{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .groteAfbeeldingPhone{
+            height: 350px;
+            max-width: 280px;
+        }
+
+        .buttonAankoop{
+            margin-top: 50px;
+        }
+
+        .afbeeldingVoorTitelPhone{
+            
+            margin-right: 0;
+
+        }
+    }
+}
+
+@media screen and (max-width: 1439px) {
+    .infoPhone{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: max-content;
+        text-align: center;
+        margin: auto;
+        gap: 0;
+
+
+    }
+
+    .nieuwephone{
+        width: 600px;
+    }
+
+    .productKaart{
+       
+        flex-basis:calc(49% - 160px) ;
+        justify-content: space-between;
+    }
+    
+    .productGrid{
+        justify-content: center;
+    }
+
+}
+
+
+
+@media screen and (max-width: 850px) {
+
+    .productKaart {
+
+        flex-basis: calc(99% - 160px);
+        justify-content: flex-start;
+    }
+    
+    .paginatie{
+        gap: 10px;
+        
+        li{
+            padding: 15px;
+        }
+    }
+    
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+    
+    .extraAfbeeldingen{
+        img{
+            height: 250px;
+        }
+    }
+    
+    .algemeneInfoVoorPhone{
+
+        
+       border: none;
+        margin: 100px auto 50px auto;
+        z-index: 1;
+        position: static;
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding:0;
+
+
+        }
+        
+
+    }
+
+    .algemeneInfoVoorPhoneContainer{
+
+        
+        .algemeneInfoVoorPhone{
+            position: static;
+            top: 100px;
+            bottom: 0;
+        }
+    }
+
+    .algemeneInfoVoorPhone ul li a{
+        text-decoration: none;
+        padding: 8px;
+        background-color: var(--background);
+        color: white;
+        text-transform: uppercase;
+        border-radius: 90px;
+    }
+    
+    
+    
+    
+}
+
+@media screen and (max-width: 620px) {
+   
+
+   .algemeneInfoVoorPhoneContainer{
+       height: 2000px;
+   }
+
+    .algemeneInfoVoorPhoneContainer:not(.algemeneInfoVoorPhone) .algemeen {
+        
+        
+        padding: 10px;
+        height: fit-content;
+        max-width: 90%;
+        margin: 0 auto 100px auto;
+
+        background-color: white;
+    }
+    
+    .algemeenArticleContainer{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .reviewklantVoorPhone{
+        padding: 10px;
+    }
+
+    .reviewInReviewContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+        max-width: 800px;
+
+
+    }
+    .reviewklantVoorPhone{
+
+        flex-basis: calc(99% - 100px);
+
+    }
+
+
+    .tableInAlgemeneContainer{
+
+        *{
+            border-collapse: collapse;
+        }
+
+        td{
+            padding: 10px 90% 10px 50px;
+        }
+
+        tr:nth-child(even){
+            background-color: rgba(189, 189, 189, 0.6);
+        }
+    }
+    
+   
+   
+    .filtrerenIndex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        width: 40%;
+        
+        #prijsRange{
+            width: 100%;
+        }
+        
+        #labelPrijsRange{
+            text-align: center;
+        }
+        
+        .search{
+            #search{
+                width: 100%;
+            }
+            svg{
+                position: absolute;
+                left: 10px;
+            }
+        }
+        
+        #merk{
+            width: 100%;
+        }
+        
+        #labelMerk{
+            text-align: center;
+        }
+    }
+
+    .checkOutNieuwePhone{
+        font-size: 10px ;
+    }
+    
+    .infoPhone{
+        
+        
+        
+
+        
+        img{
+            height: 150px;
+            width: 300px;
+        }
+        
+        .extraInformatieRecentePhone{
+            font-size: 0.7rem;
+            
+            ul{
+                list-style: none;
+                padding: 0;
+            }
+        }
+
+
+    }
+
+    .nieuwephone{
+        width: 90%;
+        padding: 35px 9px 9px;
+    }
+    
+    
+    
+    
+}
+
+@media screen and (max-width: 580px) {
+    .extraAfbeeldingen{
+        img{
+            height: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .extraAfbeeldingen{
+        img{
+            height: 150px;
+            
+        }
+
+        margin: 10px 10px 10px 10px;
+    }
+    
+    .mainNav{
+        
+        position: static;
+        margin: 0;
+        ul{
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+
+        }
+        
+        header{
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 444px) {
+    
+    .productGrid {
+        justify-content: center;
+    }
+    
+    .productKaart {
+        flex-basis: calc(80%);
+        height: 300px;
+        
+        img{
+            height: 150px;
+        }
+    }
+    
+    .labelPromotie{
+        rotate: 0deg;
+        top: -50px;
+        left: 150px;
+    }
+    
+    .reviewklant{
+        flex: 0 0 250px;         /*  shrink 0, grow 0, base 320px */
+        max-width: 280px;
+    }
+    
+}
+
+@media screen and (max-width: 367px) {
+    .infoPhone{
+        img{
+            width: 250px;
+            height: 140px;
+        }
     }
 }
