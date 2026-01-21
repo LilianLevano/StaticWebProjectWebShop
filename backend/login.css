@@ -1,0 +1,38 @@
+
+*{
+    font-family: Roboto, sans-serif;
+   
+}
+
+.bodyInloggen{
+    background-color: silver;
+}
+
+.inloggenSection{
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+    min-height: 90vh;
+    
+}
+
+.inloggenForm{
+    background-color: #535865;
+    
+    width: 600px;
+    height: 800px;
+    padding: 20px;
+}
+
+legend{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.tekstInput{
+    display: flex;
+    justify-content: center;
+
+}
+

@@ -1045,8 +1045,16 @@ footer{
         }
         
         .search{
+            
+            color: white;
+            
+            input{
+                color: white;
+            }
+            
             #search{
                 width: 100%;
+                color: white;
             }
             svg{
                 position: absolute;
