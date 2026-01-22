@@ -35,7 +35,7 @@ Het site is volledig responsive en kan op mobiele devices gebruikt worden.
 
 Chat-GPT werd gebruikt tijdens het maken van dit project.  
 
-- Chat-GPT werd enkel gebruikt voor kleine fixes (zoals een media querry die niet werkt door de specificiteit van een classe), tips te krijgen over hoe ik een specifieke design kan maken in CSS, en om voorbeelden van reviews, karakteristieken en prijzen van smartphones te krijgen om het procesus te versnellen.    
+- Chat-GPT werd enkel gebruikt voor het maken van de logo, voor kleine fixes (zoals een media querry die niet werkt door de specificiteit van een classe), tips te krijgen over hoe ik een specifieke design kan maken in CSS, en om voorbeelden van reviews, karakteristieken en prijzen van smartphones te krijgen om het procesus te versnellen.    
 
 **Geen enkele stuk code werd gegenereerd door AI in dit project**  
 
@@ -48,6 +48,9 @@ Chat-GPT werd gebruikt tijdens het maken van dit project.
 - Op de homepage, elke product in de "grid" heeft een "meer details" product. Deze button werkt en stuurt u naar de pagina van deze product.
 - Op de homepage, de (main) navigatie werkt en stuurt u naar de verschillende onderdelen van de pagina. Deze zelfde main navigatie zit ook op de subpagina's, maar sturen u gewoon op de homepage en niet specifiek naar zijn onderdelen
 - Op de homepage heeft elke product en review een kleine effect wanneer het wordt gehovered
+- De backend is niet responsief. Het kan breken op kleinere schermen.
+- Op de backend, in de categorie "Actie" in de table, de groene knop edit werkt en stuurt u naar een HTML pagina om een product te "wijzigen".
+- Op de backend, 
 
 ## Auteur
 
