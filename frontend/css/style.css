@@ -1066,6 +1066,13 @@ footer{
   
     }
 
+    .search{
+        #search{
+            max-width: 105px;
+        }
+
+    }
+
     /*Verkleint de hele sectie nieuwe phone, kleinere afbeelding en font size*/
     .infoPhone{
         
@@ -1102,6 +1109,8 @@ footer{
 }
 
 @media screen and (max-width: 500px) {
+
+
 
     
     
