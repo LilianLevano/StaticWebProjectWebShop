@@ -4,9 +4,7 @@ Telify is een webshop gemaakt enkel met HTML en CSS.
 Het biedt een aantal producten, met elk een specifieke pagina met verschillende afbeeldingen en karakteristieken.
 Het site is volledig responsive en kan op mobiele devices gebruikt worden.
 
-
 ## Plan van aanpak
-
 
 ### **Maandag**
 - **Namiddag**
@@ -33,8 +31,6 @@ Het site is volledig responsive en kan op mobiele devices gebruikt worden.
   - Laatste details toevoegen, responsiveness checken
   - Commentaar toevoegen aan de HTML en CSS van de backend
 
-
-
 ## Externe bronnen
 
 Chat-GPT werd gebruikt tijdens het maken van dit project.  
@@ -45,6 +41,13 @@ Chat-GPT werd gebruikt tijdens het maken van dit project.
 
 **Unsplash** werd gebruikt om copyright-free beelden te gebruiken voor alle producten.  
 **Canva** werd gebruikt om de grootte van de verschillende afbeeldingen makkelijk te controleren en toe te voegen aan het project.  
+
+## Instructies
+
+- Op de homepage, in de "check out" sectie staat er een "Dat wil ik zien!" button. Deze button werkt en stuurt u naar een pagina van het meest recente product.
+- Op de homepage, elke product in de "grid" heeft een "meer details" product. Deze button werkt en stuurt u naar de pagina van deze product.
+- Op de homepage, de (main) navigatie werkt en stuurt u naar de verschillende onderdelen van de pagina. Deze zelfde main navigatie zit ook op de subpagina's, maar sturen u gewoon op de homepage en niet specifiek naar zijn onderdelen
+- Op de homepage heeft elke product en review een kleine effect wanneer het wordt gehovered
 
 ## Auteur
 
