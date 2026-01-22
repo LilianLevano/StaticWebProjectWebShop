@@ -39,7 +39,7 @@ Het site is volledig responsive en kan op mobiele devices gebruikt worden.
 
 Chat-GPT werd gebruikt tijdens het maken van dit project.  
 
-- Chat-GPT werd enkel gebruikt om kleine fixes te corrigeren, tips te krijgen over hoe ik een specifieke design kan maken in CSS, en om voorbeelden van reviews, karakteristieken en prijzen van smartphones te krijgen om het procesus te versnellen.    
+- Chat-GPT werd enkel gebruikt voor kleine fixes (zoals een media querry die niet werkt door de specificiteit van een classe), tips te krijgen over hoe ik een specifieke design kan maken in CSS, en om voorbeelden van reviews, karakteristieken en prijzen van smartphones te krijgen om het procesus te versnellen.    
 
 **Geen enkele stuk code werd gegenereerd door AI in dit project**  
 
