@@ -50,7 +50,6 @@ Chat-GPT werd gebruikt tijdens het maken van dit project.
 - Op de homepage heeft elke product en review een kleine effect wanneer het wordt gehovered
 - De backend is niet responsief. Het kan breken op kleinere schermen.
 - Op de backend, in de categorie "Actie" in de table, de groene knop edit werkt en stuurt u naar een HTML pagina om een product te "wijzigen".
-- Op de backend, 
 
 ## Auteur
 
