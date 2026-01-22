@@ -37,13 +37,13 @@ Het site is volledig responsive en kan op mobiele devices gebruikt worden.
 
 ## Externe bronnen
 
-Chat-GPT werd gebruikt tijdens het maken van dit project.
+Chat-GPT werd gebruikt tijdens het maken van dit project.  
 
-- Chat-GPT werd enkel gebruikt om kleine fixes te corrigeren, tips te krijgen over hoe ik een specifieke design kan maken in CSS, en om voorbeelden van reviews, karakteristieken en prijzen van smartphones te krijgen om het procesus te versnellen.  
+- Chat-GPT werd enkel gebruikt om kleine fixes te corrigeren, tips te krijgen over hoe ik een specifieke design kan maken in CSS, en om voorbeelden van reviews, karakteristieken en prijzen van smartphones te krijgen om het procesus te versnellen.    
 
-**Geen enkele stuk code werd gegenereerd door AI in dit project**
+**Geen enkele stuk code werd gegenereerd door AI in dit project**  
 
-**Unsplash** werd gebruikt om copyright-free beelden te gebruiken voor alle producten.
+**Unsplash** werd gebruikt om copyright-free beelden te gebruiken voor alle producten.  
 **Canva** werd gebruikt om de grootte van de verschillende afbeeldingen makkelijk te controleren en toe te voegen aan het project.  
 
 ## Auteur
