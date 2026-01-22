@@ -504,7 +504,7 @@ main .recentereview{
 /*Footer word gecentraliseerd*/
 footer{
     background-color: #1E1E1E;
-    height: 1500px;
+    height: 150px;
     color: white;
     padding: 50px;
     text-align: center;
@@ -1152,8 +1152,8 @@ footer{
     .labelPromotie{
         rotate: 0deg;
         top: -55px;
-        left: 250px;
-        width: 45%;
+        left: 130px;
+        width: 150px;
     }
     
     /*De reviews worden kleiner*/
@@ -1165,6 +1165,13 @@ footer{
     
 }
 
+/*Zet de shopping basket meer op de rand om overlapping te verminderen met de producten*/
+@media screen and (max-width: 426px) {
+    .shoppingBasket{
+        top: 20px;
+        right: 5px;
+    }
+}
 
 /*Afbeelding van de nieuwe phone verkleint*/
 @media screen and (max-width: 367px) {
