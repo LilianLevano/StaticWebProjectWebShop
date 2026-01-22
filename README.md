@@ -43,6 +43,9 @@ Chat-GPT werd gebruikt tijdens het maken van dit project.
 
 **Geen enkele stuk code werd gegenereerd door AI in dit project**
 
+**Unsplash** werd gebruikt om copyright-free beelden te gebruiken voor alle producten.
+**Canva** werd gebruikt om de grootte van de verschillende afbeeldingen makkelijk te controleren en toe te voegen aan het project.  
+
 ## Auteur
 
 - Lilian Levano
